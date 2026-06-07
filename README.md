@@ -11,19 +11,9 @@
   <img alt="license" src="https://img.shields.io/badge/license-MIT-lightgrey?style=for-the-badge">
 </p>
 
-> **Prefix-tree KV-cache warmer for LLM serving. 15k-prompt benchmark; LRU-prefix saves 2.37 GB KV vs no caching.**
+> ****
 
 
-
-<p align="center">
-  <img alt="scale" src="https://img.shields.io/badge/scale-15k%20prompts-blueviolet?style=for-the-badge">
-  <img alt="hit" src="https://img.shields.io/badge/hit%20rate-16.6%25-2ecc71?style=for-the-badge">
-  <img alt="saved" src="https://img.shields.io/badge/KV%20saved-2.4%20GB-ff6b6b?style=for-the-badge">
-  <img alt="mypy" src="https://img.shields.io/badge/mypy-strict-blue?style=for-the-badge">
-  <img alt="license" src="https://img.shields.io/badge/license-MIT-lightgrey?style=for-the-badge">
-</p>
-
-> **Prefix-tree KV-cache warmer for LLM serving.** Builds a token-level prefix trie over a **15,000-prompt workload**, identifies shared system prompts and few-shot blocks, and reports how many tokens of recomputation each warming strategy avoids. On the bundled run, LRU-prefix warming saves **2.4 GB of KV bytes** vs no caching, with a 16.6% token-level hit rate.
 
 ## The challenge
 
@@ -111,15 +101,37 @@ CITATION.cff, LICENSE, Makefile, .github/workflows/ci.yml
 
 ## License
 
-MIT.
+MIT.## Concept mindmap
+
+```mermaid
+mindmap
+  root((prompt))
+    Inputs
+      Fixture
+      Seed
+      Config
+    Core
+      Modules
+      Tests
+      Mypy strict
+    Outputs
+      5 chart families
+      summary json
+      15-page PDF
+    Quality
+      Ruff
+      Coverage
+      CI on push
+```
+
 
 ## Architecture
 
 ```mermaid
 flowchart LR
-    classDef io fill:#3b6fa1,stroke:#1c1c1c,stroke-width:1.5px,color:#fff
-    classDef proc fill:#3b6fa1,stroke:#1c1c1c,stroke-width:1.5px,color:#fff
-    classDef out fill:#5b8d4a,stroke:#1c1c1c,stroke-width:1.5px,color:#fff
+    classDef io fill:#52B788,stroke:#1c1c1c,stroke-width:1.5px,color:#fff
+    classDef proc fill:#22223B,stroke:#1c1c1c,stroke-width:1.5px,color:#fff
+    classDef out fill:#9A8C98,stroke:#1c1c1c,stroke-width:1.5px,color:#fff
     A["📥 Inputs<br/>fixtures + configs"]:::io --> B["⚙️ Core pipeline<br/>prompt"]:::proc
     B --> C["🧪 Evaluation<br/>5 chart families"]:::proc
     C --> D["📊 Artifacts<br/>summary.json + PNGs"]:::out
@@ -184,7 +196,7 @@ mindmap
   </tr>
 </table>
 
-### Result charts (6 distinct families, palette: *Default*)
+### Result charts (6 distinct families, palette: *Prefix Tree*)
 
 <table>
   <tr><td align="center"><strong>Bytes Saved</strong><br/><img src="./results/figures/bytes_saved.png" width="100%"/></td><td align="center"><strong>Depth</strong><br/><img src="./results/figures/depth.png" width="100%"/></td></tr>
