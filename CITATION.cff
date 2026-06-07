@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+title: prompt-cache-warmer
+message: "Prefix-tree KV-cache warmer for LLM serving."
+authors: [{family-names: "Lingampally", given-names: "Akshitha Reddy"}]
+date-released: "2025-01-12"
+version: "0.4.0"
+license: "MIT"
+url: "https://github.com/Akshitha024/prompt-cache-warmer"

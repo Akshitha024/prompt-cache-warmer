@@ -1,0 +1,23 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.13.3, pytest-9.0.3, pluggy-1.6.0 -- /Users/mani/Projects/akshitha-portfolio/projects/prompt-cache-warmer/.venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /Users/mani/Projects/akshitha-portfolio/projects/prompt-cache-warmer
+configfile: pyproject.toml
+testpaths: tests
+plugins: cov-7.1.0
+collecting ... collected 12 items
+
+tests/test_bench.py::test_no_warming_zero_hit_rate PASSED                [  8%]
+tests/test_bench.py::test_lru_warming_positive_hit_rate PASSED           [ 16%]
+tests/test_bench.py::test_frequency_beats_none PASSED                    [ 25%]
+tests/test_runner.py::test_runner_smoke PASSED                           [ 33%]
+tests/test_trie.py::test_insert_and_longest_cached_prefix_zero_when_not_cached PASSED [ 41%]
+tests/test_trie.py::test_mark_cached_then_hit PASSED                     [ 50%]
+tests/test_trie.py::test_capacity_blocks_marking PASSED                  [ 58%]
+tests/test_trie.py::test_evict_oldest_lowers_count PASSED                [ 66%]
+tests/test_workload.py::test_deterministic[11] PASSED                    [ 75%]
+tests/test_workload.py::test_deterministic[17] PASSED                    [ 83%]
+tests/test_workload.py::test_deterministic[23] PASSED                    [ 91%]
+tests/test_workload.py::test_shared_prefixes_exist PASSED                [100%]
+
+============================== 12 passed in 0.86s ==============================

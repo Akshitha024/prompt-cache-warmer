@@ -1,0 +1,22 @@
+............                                                             [100%]
+================================ tests coverage ================================
+_______________ coverage: platform darwin, python 3.13.3-final-0 _______________
+
+Name                            Stmts   Miss  Cover
+---------------------------------------------------
+src/pcw/__init__.py                 1      0   100%
+src/pcw/bench/__init__.py           0      0   100%
+src/pcw/bench/run.py               45      2    96%
+src/pcw/cli/__init__.py             0      0   100%
+src/pcw/cli/main.py                20     20     0%
+src/pcw/runner.py                  23      0   100%
+src/pcw/trie/__init__.py            0      0   100%
+src/pcw/trie/prefix.py             59      2    97%
+src/pcw/types.py                   19      0   100%
+src/pcw/viz/__init__.py             0      0   100%
+src/pcw/viz/charts.py              72      1    99%
+src/pcw/workload/__init__.py        0      0   100%
+src/pcw/workload/generator.py      15      0   100%
+---------------------------------------------------
+TOTAL                             254     25    90%
+12 passed in 1.63s
