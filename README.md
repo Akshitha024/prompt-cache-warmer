@@ -123,8 +123,6 @@ mindmap
       Coverage
       CI on push
 ```
-
-
 ## Architecture
 
 ```mermaid
